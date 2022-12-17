@@ -62,12 +62,20 @@ print(z.infer_signature('descartes','professor')) # ('homem', '__unknown__')
 print(z.infer_signature('descartes','amigo')) # None
 print(z.infer_signature('descartes','altura')) # ('mamifero', 'number')
 
+print()
+z.add_association('descartes','homem','pai_de','pessoa','many')
+print(z.infer_signature('descartes','pai_de')) # ('homem', 'pessoa')
+z.add_association('descartes','platonico','pai_de','socratica')
+print(z.infer_type('descartes','platonico')) # homem
+print(z.infer_type('descartes','socratica')) # pessoa
+z.add_association('descartes','socratica','vive_em','atenas')
+print(z.infer_signature('descartes','vive_em')) # ('pessoa', '__unknown__')
+
 print("..........................................................")
 
 # ----------------------------------------------------------------------
 # Bayesian Networks
 # ----------------------------------------------------------------------
-
 
 
 print("\n-- ## Ex. 2 --------------------------------")
@@ -240,6 +248,5 @@ print(puzzle.constraints['TX2OF', 'O']('TX2OF', (0, 3, 3, 0), 'O', 3)) # True
 
 print('solution:',puzzle.search())
 print('calls:',puzzle.calls)
-
 
 
