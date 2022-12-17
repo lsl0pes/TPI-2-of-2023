@@ -10,7 +10,7 @@ class BayesNet:
     def joint_prob(self,conjunction):
         mtrue, mfalse = conjunction
         result = 1.0
-        for var in ltrue+lfalse:
+        for var in mtrue+mfalse:
             for (mt,mf,p) in self.dependencies[var]:
                 if all(x in mfalse for x in mf) and \
                    all(x in mtrue for x in mt):

@@ -55,6 +55,7 @@ print(z.infer_type('descartes','marx')) # None
 print(z.infer_type('descartes','filosofia')) # __unknown__
 print(z.infer_type('descartes',1.85)) # number
 
+
 print(z.infer_signature('descartes','professor')) # ('homem', '__unknown__')
 print(z.infer_signature('descartes','amigo')) # None
 print(z.infer_signature('descartes','altura')) # ('mamifero', 'number')
@@ -147,6 +148,7 @@ print(bn.markov_blanket('s_t')) # ['d', 'car_s', 'f_s', 's_q', 'c_c']
 print(bn.markov_blanket('c_s')) # ['a', 'b_v', 'b_a']
 
 
+print("..........................................................")
 
 # ----------------------------------------------------------------------
 # Semantic Networks
@@ -227,6 +229,15 @@ puzzle.higherorder2binary([ 'T','X2','O', 'F' ],
 print('number of variables:',len(puzzle.domains))
 print('number of binary constrains:',len(puzzle.constraints))
 
+print('ORX1:',puzzle.domains['ORX1'])
+print('WX1UX2:',puzzle.domains['WX1UX2'])
+print('TX2OF:',puzzle.domains['TX2OF'])
+
+print('TX2OF==(0, 3, 3, 0) consistent with O==3?')
+print(puzzle.constraints['TX2OF', 'O']('TX2OF', (0, 3, 3, 0), 'O', 3)) # True
+
 print('solution:',puzzle.search())
 print('calls:',puzzle.calls)
+
+
 
