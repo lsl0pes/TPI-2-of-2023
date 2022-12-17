@@ -39,6 +39,7 @@ print("\n-- ## Ex. 1.a) --------------------------------")
 print(z.is_object('descartes','socrates')) # True
 print(z.is_object('descartes','homem')) # False
 print(z.is_object('descartes','merkel')) # False
+print(z.is_object('descartes','filosofia')) # True
 
 print("\n-- ## Ex. 1.b) --------------------------------")
 
@@ -53,7 +54,11 @@ print(z.infer_type('descartes','platao')) # homem
 print(z.infer_type('descartes','marx')) # None
 print(z.infer_type('descartes','filosofia')) # __unknown__
 print(z.infer_type('descartes',1.85)) # number
- 
+
+print(z.infer_signature('descartes','professor')) # ('homem', '__unknown__')
+print(z.infer_signature('descartes','amigo')) # None
+print(z.infer_signature('descartes','altura')) # ('mamifero', 'number')
+
 print("..........................................................")
 
 # ----------------------------------------------------------------------

@@ -3,6 +3,7 @@
 True
 False
 False
+True
 
 -- ## Ex. 1.b) --------------------------------
 False
@@ -15,10 +16,13 @@ homem
 None
 __unknown__
 number
+('homem', '__unknown__')
+None
+('mamifero', 'number')
 ..........................................................
 
 -- ## Ex. 2 --------------------------------
-['car_s', 's_q', 'f_s', 'd', 'c_c']
+['car_s', 'c_c', 'f_s', 'd', 's_q']
 ['b_v', 'a', 'b_a']
 
 -- ## Ex. 3.a) --------------------------------
@@ -27,6 +31,6 @@ calls: 3
 
 -- ## Ex. 3.b) --------------------------------
 number of variables: 11
-number of constrains: 52
+number of binary constrains: 52
 solution: {'T': 1, 'W': 3, 'O': 2, 'U': 6, 'R': 4, 'F': 0, 'X1': 0, 'X2': 0, 'ORX1': (2, 4, 0), 'WX1UX2': (3, 0, 6, 0), 'TX2OF': (1, 0, 2, 0)}
 calls: 5
