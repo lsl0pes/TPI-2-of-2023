@@ -54,7 +54,9 @@ print(z.infer_type('descartes','platao')) # homem
 print(z.infer_type('descartes','marx')) # None
 print(z.infer_type('descartes','filosofia')) # __unknown__
 print(z.infer_type('descartes',1.85)) # number
+print(z.infer_type('descartes','socrates')) # homem
 
+print()
 
 print(z.infer_signature('descartes','professor')) # ('homem', '__unknown__')
 print(z.infer_signature('descartes','amigo')) # None
